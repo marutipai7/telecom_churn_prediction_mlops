@@ -1,0 +1,16 @@
+pandas
+mlflow
+fastapi
+uvicorn
+scikit-learn
+numpy
+pydantic
+joblib
+python-multipart
+pytest
+black
+isort
+python-dotenv
+catboost
+lightgbm
+xgboost
