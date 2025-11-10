@@ -1,6 +1,8 @@
 from fastapi import FastAPI
 import mlflow.sklearn
 import pandas as pd
+from api.models.predict_schema import PredictRequest
+from api.services.predict_services import predict_churn
 
 app = FastAPI(title="Churn Prediction API")
 
