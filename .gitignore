@@ -6,3 +6,4 @@ __pycache__/
 .DS_Store
 logs/
 *.log
+tree_print.py
