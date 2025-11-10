@@ -6,7 +6,7 @@ metadata:
     kubernetes.io/ingress.class: nginx
 spec:
   rules:
-    - host: churn-api.example.com
+    - host: churn-api.yourdomain.com
       http:
         paths:
           - path: /
