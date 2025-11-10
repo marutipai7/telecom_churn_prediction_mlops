@@ -14,3 +14,4 @@ python-dotenv
 catboost
 lightgbm
 xgboost
+boto3

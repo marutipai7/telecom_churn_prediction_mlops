@@ -14,9 +14,30 @@ spec:
     spec:
       containers:
         - name: churn-api
-          image: <YOUR_ECR_REPO>/churn-api:latest
+          image: IMAGE_PLACEHOLDER
           ports:
             - containerPort: 8000
           env:
             - name: MLFLOW_TRACKING_URI
-              value: "http://mlflow:5000"
+              value: "MLFLOW_URI_PLACEHOLDER"
+            - name: MODEL_URI
+              value: "MODEL_URI_PLACEHOLDER"
+          readinessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          livenessProbe:
+            httpGet:
+              path: /health
+              port: 8000
+            initialDelaySeconds: 15
+            periodSeconds: 10
+          resources:
+            requests:
+              cpu: "200m"
+              memory: "256Mi"
+            limits:
+              cpu: "500m"
+              memory: "512Mi"
