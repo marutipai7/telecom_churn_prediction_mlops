@@ -15,3 +15,4 @@ catboost
 lightgbm
 xgboost
 boto3
+httpx
